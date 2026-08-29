@@ -1,0 +1,17 @@
+SON OF MAN — INSTALL ON ANDROID
+
+This package is an installable web app (PWA).
+
+Important: Chrome requires the files to be served from a web address (HTTPS) before
+it offers the normal "Install app" button. Opening index.html directly from Downloads
+may show the app but may not allow installation.
+
+Easiest path:
+1. Put this package on a web host with HTTPS.
+2. Open the website in Chrome on your Android phone.
+3. Chrome menu (⋮) -> Add to Home screen / Install app.
+4. The Son of Man app will appear on the phone like an app.
+
+The package is ready for that step. The next production step is connecting the app
+to a real database, authentication, payment confirmation, admin dashboard and staff
+management.

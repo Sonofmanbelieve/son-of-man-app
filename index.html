@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081a33">
+<title>Son of Man Laundry & Janitor Services</title>
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--navy:#081a33;--navy2:#102b4f;--gold:#d9a52b;--cream:#f7f5ef;--ink:#172033;--muted:#6f7888;--white:#fff;--line:#e7e8eb;--green:#238a5a}
+*{box-sizing:border-box}body{margin:0;background:#eef1f5;font-family:Inter,Arial,sans-serif;color:var(--ink)}
+.app{max-width:430px;min-height:100vh;margin:auto;background:var(--cream);position:relative;box-shadow:0 0 30px #0002}
+.screen{display:none;min-height:100vh;padding-bottom:86px}.screen.active{display:block}
+.hero{background:var(--navy);color:white;padding:42px 22px 30px;border-radius:0 0 28px 28px}
+.logo{width:64px;height:64px;border:2px solid var(--gold);border-radius:20px;display:grid;place-items:center;color:var(--gold);font-size:28px;font-weight:800;margin-bottom:18px}
+h1{margin:0 0 8px;font-size:30px;letter-spacing:.5px}.tag{color:#f2c85a;font-weight:700}.sub{color:#c8d0dc;line-height:1.5}
+.content{padding:20px}.section-title{font-size:18px;font-weight:800;margin:8px 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:17px;cursor:pointer;box-shadow:0 5px 18px #00000008}.card:hover{transform:translateY(-1px)}
+.icon{font-size:26px;margin-bottom:10px}.small{font-size:12px;color:var(--muted);line-height:1.4}.service-name{font-weight:800}
+.btn{border:0;border-radius:13px;padding:14px 16px;font-weight:800;cursor:pointer;width:100%;font-size:15px}.gold{background:var(--gold);color:#151515}.dark{background:var(--navy);color:white}.outline{background:white;color:var(--navy);border:1px solid #cfd5dd}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.back{border:0;background:none;font-size:22px;cursor:pointer}.title{font-weight:900}
+.input{width:100%;padding:14px;border:1px solid #d9dde4;border-radius:12px;background:white;margin:6px 0 14px;font-size:15px}
+.label{font-size:12px;font-weight:800;color:#5c6574;margin-top:8px}
+.booking{background:white;border-radius:17px;padding:16px;border:1px solid var(--line);margin-bottom:12px}
+.price{font-size:25px;font-weight:900}.pill{display:inline-block;padding:6px 9px;border-radius:999px;background:#edf8f2;color:var(--green);font-size:11px;font-weight:800}
+.timeline{border-left:3px solid var(--gold);padding-left:18px;margin:16px 5px}.step{margin:0 0 18px;position:relative}.step:before{content:"";position:absolute;left:-26px;top:2px;width:10px;height:10px;background:var(--gold);border-radius:50%}
+.bottom{position:fixed;bottom:0;width:100%;max-width:430px;background:white;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 5px;z-index:10}.nav{border:0;background:none;color:#697281;font-size:11px;font-weight:700}.nav.active{color:var(--navy)}.nav span{display:block;font-size:21px;margin-bottom:3px}
+.badge{background:#e8b52e;color:#111;border-radius:999px;padding:3px 7px;font-size:10px;font-weight:900}
+.kpi{background:var(--navy);color:white;border-radius:18px;padding:16px}.kpi b{font-size:24px}.kpi small{color:#c7d0dc}
+.list{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.center{text-align:center;padding:50px 25px}.success{font-size:58px}.qtybox{display:flex;align-items:center;gap:10px}.qtybox button{width:44px;height:44px;border:1px solid #d9dde4;background:white;border-radius:10px;font-size:22px;font-weight:800}.qtybox input{margin:0;text-align:center}.quote-box{background:#fff8df;border:1px solid #f0d47a;border-radius:16px;padding:16px}.photo-box{border:2px dashed #cfd5dd;border-radius:14px;padding:18px;text-align:center;color:#6f7888}.admin-note{background:#eef4ff;border-left:4px solid var(--navy);padding:13px;border-radius:10px;font-size:13px;line-height:1.5}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#081a33"></head>
+<body>
+<div class="app">
+
+<section id="welcome" class="screen active">
+  <div class="hero" style="min-height:62vh;padding-top:70px">
+    <div class="logo" style="padding:4px;background:white;border:2px solid var(--gold);overflow:hidden"><img src="logo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div><h1>SON OF MAN</h1><div class="tag">LAUNDRY & JANITOR SERVICES</div>
+    <p class="sub">Premium laundry, cleaning and janitorial care across Akure, Edo and Delta State — with additional personnel mobilized for large jobs when required.</p>
+    <div style="height:55px"></div>
+    <button class="btn gold" onclick="go('home')">GET STARTED</button><br><br>
+    <button class="btn outline" onclick="go('home')">LOGIN</button>
+  </div>
+  <div class="content"><div class="row">
+    <div class="card"><div class="icon">✨</div><b>Premium</b><div class="small">Quality service</div></div>
+    <div class="card"><div class="icon">🛡️</div><b>Trusted</b><div class="small">Verified professionals</div></div>
+  </div></div>
+</section>
+
+<section id="home" class="screen">
+  <div class="hero"><div class="tag">SON OF MAN</div><h1 style="font-size:25px">Good morning, Elohor 👋</h1><p class="sub">What can we take care of today?</p></div>
+  <div class="content">
+    <div class="section-title">Book a service</div>
+    <div class="grid">
+      <div class="card" onclick="service('Laundry & Ironing')"><div class="icon">🧺</div><div class="service-name">Laundry</div><div class="small">Wash, iron & care</div></div>
+      <div class="card" onclick="service('Dry Cleaning')"><div class="icon">👔</div><div class="service-name">Dry Cleaning</div><div class="small">Premium garment care</div></div>
+      <div class="card" onclick="service('Home Cleaning')"><div class="icon">🏠</div><div class="service-name">Home Cleaning</div><div class="small">Regular or deep clean</div></div>
+      <div class="card" onclick="service('Janitorial Services')"><div class="icon">🧹</div><div class="service-name">Janitorial</div><div class="small">Homes & buildings</div></div>
+      <div class="card" onclick="service('Office Cleaning')"><div class="icon">🏢</div><div class="service-name">Office Care</div><div class="small">Professional workspace care</div></div>
+      <div class="card" onclick="service('Property Care')"><div class="icon">🏡</div><div class="service-name">Property Care</div><div class="small">Custom maintenance</div></div>
+    </div>
+    <div class="booking"><b>Need help?</b><p class="small">Call 08117823711 or WhatsApp 08086536187.</p><div class="row"><a class="btn dark" href="tel:08117823711">Call</a><a class="btn gold" href="https://wa.me/2348086536187">WhatsApp</a></div></div><div class="booking"><b>Large jobs? We've got you covered.</b><p class="small">Son of Man can mobilize additional trained personnel for bulk cleaning, corporate contracts, events and large properties when required.</p><span class="pill">Flexible team capacity</span></div><div class="section-title" style="margin-top:25px">Upcoming service</div>
+    <div class="booking"><b>Home Cleaning</b><p class="small">Thursday • 10:00 AM • Lagos</p><span class="pill">Confirmed</span></div>
+  </div>
+  <nav class="bottom"><button class="nav active" onclick="go('home')"><span>⌂</span>Home</button><button class="nav" onclick="go('bookings')"><span>▣</span>Bookings</button><button class="nav" onclick="go('track')"><span>⌁</span>Track</button><button class="nav" onclick="go('elite')"><span>♛</span>Elite</button><button class="nav" onclick="go('profile')"><span>◉</span>Profile</button></nav>
+</section>
+
+<section id="services" class="screen"><div class="top"><button class="back" onclick="go('home')">‹</button><div class="title">Choose Service</div><div></div></div><div class="content"><div class="section-title">What do you need?</div><div class="booking"><b>Corporate & Bulk Cleaning</b><p class="small">Hotels, offices, estates, schools, hospitals, events and large properties.</p><button class="btn dark" onclick="alert('Corporate quote request: we will contact you to assess the job and provide a premium quotation.')">REQUEST CORPORATE QUOTE</button></div><div id="serviceList"></div></div></section>
+
+<section id="book" class="screen"><div class="top"><button class="back" onclick="go('services')">‹</button><div class="title">Book Service</div><div></div></div><div class="content">
+  <div class="booking"><div class="small">SELECTED SERVICE</div><h2 id="selectedService">Home Cleaning</h2><div class="price" id="price">₦25,000</div></div>
+
+  <div id="quantityPanel" class="booking" style="display:none">
+    <div class="label" id="quantityLabel">Quantity</div>
+    <div class="qtybox"><button onclick="changeQty(-1)">−</button><input id="quantity" class="input" type="number" min="1" value="1" oninput="updateQty()"><button onclick="changeQty(1)">+</button></div>
+    <div class="small" id="unitText">₦1,000 per cloth</div>
+  </div>
+
+  <div id="quotePanel" class="quote-box" style="display:none;margin-bottom:14px">
+    <b>Premium quotation service</b>
+    <p class="small">For corporate, estate, hotel, school, hospital, event or large-property jobs, submit the details below. Son of Man will assess the job and provide a premium quotation.</p>
+  </div>
+
+  <div class="label">SERVICE DATE</div><input id="serviceDate" class="input" type="date">
+  <div class="label">PREFERRED TIME</div><select id="serviceTime" class="input"><option>8:00 AM</option><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option></select>
+  <div class="label">SERVICE ADDRESS</div><input id="serviceAddress" class="input" placeholder="Home / Office / Estate address">
+  <div class="label">PICKUP / SERVICE OPTION</div><select id="serviceOption" class="input"><option>Service at my location</option><option>Pickup & delivery</option><option>I will bring/drop off items</option></select>
+  <div class="label">PHONE NUMBER</div><input id="customerPhone" class="input" placeholder="080...">
+  <div class="label">SPECIAL INSTRUCTIONS</div><textarea id="instructions" class="input" rows="4" placeholder="Anything our professional should know?"></textarea>
+  <div id="bulkPhoto" style="display:none"><div class="label">JOB PHOTOS (OPTIONAL)</div><div class="photo-box">📷 Add photos of the property/job when the full app is connected to cloud storage.</div></div>
+
+  <div class="admin-note" style="margin:14px 0">Large jobs can be handled with additional personnel mobilized by Son of Man when required. Your booking will be reviewed according to scope, location and timing.</div>
+  <button class="btn gold" onclick="submitSmartBooking()">CONTINUE</button>
+</div></section>
+
+<section id="confirm" class="screen"><div class="top"><button class="back" onclick="go('book')">‹</button><div class="title">Confirm Booking</div><div></div></div><div class="content">
+  <div class="booking"><div class="small">BOOKING SUMMARY</div><h2 id="confirmService">Home Cleaning</h2><div class="list"><span>Date</span><b>9 May 2025</b></div><div class="list"><span>Time</span><b>10:00 AM</b></div><div class="list"><span>Location</span><b>Lagos</b></div><div class="list"><span>Total</span><b id="confirmPrice">₦25,000</b></div></div>
+  <button class="btn gold" onclick="go('payment')">CONFIRM & PAY</button>
+</div></section>
+
+<section id="quoteRequest" class="screen"><div class="top"><button class="back" onclick="go('book')">‹</button><div class="title">Request a Quote</div><div></div></div><div class="content">
+<div class="booking"><div class="small">QUOTE REQUEST</div><h2 id="quoteService">Corporate / Bulk Cleaning</h2><p class="small">Tell us about the job and Son of Man will prepare a premium quotation.</p></div>
+<div class="label">PROPERTY / BUSINESS TYPE</div><select class="input"><option>Estate / Large Home</option><option>Hotel</option><option>Office</option><option>School</option><option>Hospital</option><option>Event</option><option>Post-construction</option><option>Other</option></select>
+<div class="label">PROPERTY / JOB DESCRIPTION</div><textarea class="input" rows="5" placeholder="Example: 7-bedroom duplex, 4 bathrooms, kitchen, living areas..."></textarea>
+<div class="label">LOCATION</div><input class="input" placeholder="Full service location">
+<div class="label">PREFERRED DATE</div><input class="input" type="date">
+<div class="label">PHONE / WHATSAPP</div><input class="input" placeholder="080...">
+<div class="photo-box">📷 Photos can be attached here in the full production app.</div><br>
+<button class="btn gold" onclick="go('quoteSuccess')">SUBMIT QUOTE REQUEST</button>
+</div></section>
+
+<section id="quoteSuccess" class="screen"><div class="center"><div class="success">✓</div><h1 style="font-size:26px">Quote Request Sent</h1><p class="sub" style="color:var(--muted)">Your request has been received. Son of Man will review the job and contact you with a premium quotation.</p><div class="booking" style="text-align:left"><b>Request ID: SOM-Q-00124</b><p class="small">Status: Awaiting assessment</p><span class="pill">Received</span></div><button class="btn dark" onclick="go('home')">BACK HOME</button></div></section>
+<section id="payment" class="screen"><div class="top"><button class="back" onclick="go('confirm')">‹</button><div class="title">Secure Payment</div><div></div></div><div class="content">
+  <div class="booking"><div class="small">AMOUNT TO PAY</div><div class="price" id="payPrice">₦25,000</div></div>
+  <div class="card" onclick="completeBooking()">💳 <b>Card Payment</b><div class="small">Secure payment processing</div></div><br>
+  <div class="card" onclick="completeBooking()">🏦 <b>Bank Transfer</b><div class="small">Pay directly from your bank</div></div><br>
+  <div class="card" onclick="completeBooking()">📱 <b>Other supported methods</b></div>
+</div></section>
+
+<section id="success" class="screen"><div class="center"><div class="success">✓</div><h1 style="font-size:26px">Booking Confirmed</h1><p class="sub" style="color:var(--muted)">Your Son of Man professional will be assigned shortly.</p><div class="booking" style="text-align:left"><b id="successService">Home Cleaning</b><p class="small">Booking ID: SOM12345</p><span class="pill">Confirmed</span></div><button class="btn dark" onclick="go('track')">TRACK SERVICE</button><br><br><button class="btn outline" onclick="go('home')">BACK HOME</button></div></section>
+
+<section id="track" class="screen"><div class="top"><button class="back" onclick="go('home')">‹</button><div class="title">Track Service</div><div></div></div><div class="content">
+  <div class="booking"><b>Order #SOM12345</b><p class="small">Home Cleaning • Today</p></div>
+  <div class="timeline"><div class="step"><b>Booking Confirmed</b><div class="small">Your request is confirmed.</div></div><div class="step"><b>Professional Assigned</b><div class="small">A verified professional is assigned.</div></div><div class="step"><b>On the Way</b><div class="small">You'll be notified when they depart.</div></div><div class="step"><b>Service in Progress</b><div class="small">Service is currently underway.</div></div><div class="step"><b>Completed</b><div class="small">Review and receipt available after completion.</div></div></div>
+</div></section>
+
+<section id="bookings" class="screen"><div class="top"><div class="title">My Bookings</div><div class="badge">3</div></div><div class="content"><div class="booking"><b>Home Cleaning</b><p class="small">Thu • 10:00 AM</p><span class="pill">Confirmed</span></div><div class="booking"><b>Laundry Pickup</b><p class="small">Sat • 9:00 AM</p><span class="pill">Scheduled</span></div><div class="booking"><b>Office Cleaning</b><p class="small">Mon • 8:00 AM</p><span class="pill">Recurring</span></div></div></section>
+
+<section id="elite" class="screen"><div class="top"><div class="title">Son of Man Elite</div><div>♛</div></div><div class="content"><div class="hero" style="border-radius:20px"><div class="tag">SON OF MAN ELITE</div><h1 style="font-size:26px">Premium service, prioritized.</h1><p class="sub">For clients who expect exceptional care.</p><button class="btn gold" onclick="alert('Elite membership request received!')">JOIN ELITE</button></div><div class="section-title">Member benefits</div><div class="booking">👑 Priority booking</div><div class="booking">🤝 Preferred professionals</div><div class="booking">🚨 Emergency service priority</div><div class="booking">💬 Dedicated support</div><div class="booking">📅 Recurring service plans</div></div></section>
+
+<section id="profile" class="screen"><div class="top"><div class="title">My Profile</div><div></div></div><div class="content"><div class="booking"><h2>Elohor Believe</h2><p class="small">Premium Customer</p></div><div class="list"><span>Saved addresses</span><b>2 ›</b></div><div class="list"><span>Invoices</span><b>›</b></div><div class="list"><span>Payment methods</span><b>›</b></div><div class="list"><span>Support</span><b>24/7 ›</b></div><br><div class="booking"><b>Service & Care Policy</b><p class="small">We take reasonable care with every item. Customers should disclose delicate fabrics, valuable items, existing stains or damage before service. Results can vary by fabric, stain type and item condition. Claims are reviewed individually based on the circumstances and available evidence.</p></div>
+<div class="booking"><b>Cancellation Policy</b><p class="small">Cancellation is free before a professional is dispatched. Charges may apply after dispatch.</p></div>
+<div class="booking"><b>Large Job Capacity</b><p class="small">For bulk or large-scale work, Son of Man may mobilize additional personnel as needed. Large jobs are quoted according to scope, staffing, timing and location.</p></div><br><button class="btn dark" onclick="go('welcome')">Log out</button></div></section>
+
+</div>
+<script>
+let currentService='Home Cleaning', currentPrice='₦25,000';
+const services=[
+['🧺','Laundry & Ironing','₦1,000 per cloth','Per cloth'],
+['🛏️','Duvet Cleaning','₦3,500 per duvet','Per duvet'],
+['👔','Dry Cleaning','Premium garment care','From ₦10,000'],
+['🏠','Home Cleaning','Regular home cleaning','From ₦25,000'],
+['🏢','Office Cleaning','Professional workspace care','Request quote'],
+['🧹','Janitorial Services','Daily, weekly or contract','Request quote'],
+['✨','Deep Cleaning','Intensive home cleaning','₦40,000'],
+['🪟','Window Cleaning','Interior & exterior windows','From ₦15,000'],
+['🏡','Property Care','Custom estate/property care','Request quote']
+];
+function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function service(name){currentService=name;go('services')}
+function renderServices(){
+ const box=document.getElementById('serviceList'); box.innerHTML='';
+ services.forEach((s)=>{
+   let d=document.createElement('div'); d.className='card'; d.style.marginBottom='12px';
+   d.innerHTML=`<div class="row"><div style="font-size:28px">${s[0]}</div><div><b>${s[1]}</b><div class="small">${s[2]}</div></div><div style="margin-left:auto;font-weight:800">${s[3]}</div></div>`;
+   d.onclick=()=>{
+     currentService=s[1];
+     currentPrice=s[3].startsWith('₦')?s[3]:'Request quote';
+     document.getElementById('selectedService').textContent=currentService;
+     document.getElementById('confirmService').textContent=currentService;
+     document.getElementById('price').textContent=currentPrice;
+     document.getElementById('confirmPrice').textContent=currentPrice;
+     document.getElementById('payPrice').textContent=currentPrice;
+     document.getElementById('successService').textContent=currentService;
+     document.getElementById('quantity').value=1;
+     setupBooking(currentService);
+     if(currentService==='Laundry & Ironing'){currentPrice='₦1,000';document.getElementById('price').textContent=currentPrice}
+     if(currentService==='Duvet Cleaning'){currentPrice='₦3,500';document.getElementById('price').textContent=currentPrice}
+     go('book');
+   };
+   box.appendChild(d)
+ })
+}
+function completeBooking(){go('success')}
+function setupBooking(service){
+  const qtyPanel=document.getElementById('quantityPanel');
+  const quotePanel=document.getElementById('quotePanel');
+  const bulkPhoto=document.getElementById('bulkPhoto');
+  qtyPanel.style.display=(service==='Laundry & Ironing'||service==='Duvet Cleaning')?'block':'none';
+  quotePanel.style.display=(service==='Janitorial Services'||service==='Office Cleaning'||service==='Property Care')?'block':'none';
+  bulkPhoto.style.display=quotePanel.style.display;
+  if(service==='Laundry & Ironing'){document.getElementById('quantityLabel').textContent='Number of clothes';document.getElementById('unitText').textContent='₦1,000 per cloth';}
+  if(service==='Duvet Cleaning'){document.getElementById('quantityLabel').textContent='Number of duvets';document.getElementById('unitText').textContent='₦3,500 per duvet';}
+}
+function changeQty(n){const q=document.getElementById('quantity');q.value=Math.max(1,(parseInt(q.value)||1)+n);updateQty()}
+function updateQty(){
+  const n=Math.max(1,parseInt(document.getElementById('quantity').value)||1);
+  const unit=currentService==='Laundry & Ironing'?1000:3500;
+  if(currentService==='Laundry & Ironing'||currentService==='Duvet Cleaning'){
+    currentPrice='₦'+(n*unit).toLocaleString();
+    document.getElementById('price').textContent=currentPrice;
+  }
+}
+function submitSmartBooking(){
+  if(document.getElementById('quotePanel').style.display!=='none'){
+    document.getElementById('quoteService').textContent=currentService;
+    go('quoteRequest'); return;
+  }
+  if(currentService==='Laundry & Ironing'||currentService==='Duvet Cleaning') updateQty();
+  document.getElementById('confirmService').textContent=currentService+(document.getElementById('quantityPanel').style.display!=='none'?' ('+document.getElementById('quantity').value+')':'');
+  document.getElementById('confirmPrice').textContent=currentPrice;
+  document.getElementById('payPrice').textContent=currentPrice;
+  document.getElementById('successService').textContent=document.getElementById('confirmService').textContent;
+  go('confirm');
+}
+
+renderServices();
+</script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("service-worker.js")}</script></body></html>

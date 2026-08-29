@@ -1,0 +1,11 @@
+{
+  "name": "Son of Man Laundry & Janitor Services",
+  "short_name": "Son of Man",
+  "description": "Premium laundry, cleaning and janitorial services.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#081a33",
+  "orientation": "portrait"
+}
